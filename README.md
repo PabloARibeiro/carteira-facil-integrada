@@ -15,7 +15,9 @@ http://localhost:8080
 Comandos extras:
 -Verificar tabela usuários:
 docker exec -it dev-postgres psql -U postgres -d carteira_facil -c "SELECT id, nome, email, role, subscription_type FROM usuarios;"
+
 -Tornar Usuário em Admin:
 docker exec -it dev-postgres psql -U postgres -d carteira_facil -c "UPDATE usuarios SET role = 'ADMIN' WHERE email = 'seu_email@aqui.com';"
+
 -Tornar usuário Free em Premium:
 docker exec -it dev-postgres psql -U postgres -d carteira_facil -c "UPDATE usuarios SET subscription_type = 'PREMIUM' WHERE email = 'seu_email@aqui.com';"
