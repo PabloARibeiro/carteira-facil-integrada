@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-container { max-width: 1000px; margin: 40px auto; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .badge-admin { background-color: #E3F2FD; color: #1565C0; }
+        .badge-client { background-color: #F5F5F5; color: #616161; }
+        .badge-premium { background-color: #FFF8E1; color: #F57F17; }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <div class="user-info">
+                <h2>Painel Administrativo</h2>
+            </div>
+            <div class="user-info">
+                <span id="admin-name">Admin</span>
+                <a href="index.html" class="logout-button" onclick="localStorage.removeItem('cf_auth')">Sair</a>
+            </div>
+        </header>
+
+        <section>
+            <h3>Usuários Cadastrados</h3>
+            <table class="expenses-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Tipo</th>
+                        <th>Plano</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="users-tbody">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
