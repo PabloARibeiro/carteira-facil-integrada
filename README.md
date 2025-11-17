@@ -13,6 +13,7 @@ docker run --name dev-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=ro
 http://localhost:8080
 
 Comandos extras:
+
 -Verificar tabela usuários:
 docker exec -it dev-postgres psql -U postgres -d carteira_facil -c "SELECT id, nome, email, role, subscription_type FROM usuarios;"
 
